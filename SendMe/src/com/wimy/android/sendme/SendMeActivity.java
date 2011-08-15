@@ -6,7 +6,13 @@ import com.wimy.android.sendme.filter.TweetDeckTwitter;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
+import android.widget.Toast;
 
+/**
+ * Make another Intent to email application and finish itself
+ * @author zelon
+ *
+ */
 public class SendMeActivity extends Activity
 {
 	/** Called when the activity is first created. */
@@ -55,10 +61,17 @@ public class SendMeActivity extends Activity
 				android.content.Intent.ACTION_SEND
 				);
 
+		String email = SettingActivity.getCurrentEmail(this);
+		
+		if ( email == null || email.trim().length() <= 2 ) {
+			Toast.makeText(this, "Please set your email address before sending", Toast.LENGTH_LONG).show();
+			return;
+		}
+		
 		emailIntent.setType("plain/text");
 
 		emailIntent.putExtra(Intent.EXTRA_EMAIL,
-				new String[] { "zelonion@gmail.com" });
+				new String[] { email });
 
 		emailIntent.putExtra(Intent.EXTRA_SUBJECT,
 				"[SendMe]   " + sendMeData.getSubject());
