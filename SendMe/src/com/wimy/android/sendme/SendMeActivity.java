@@ -73,8 +73,7 @@ public class SendMeActivity extends Activity
 		emailIntent.putExtra(Intent.EXTRA_EMAIL,
 				new String[] { email });
 
-		emailIntent.putExtra(Intent.EXTRA_SUBJECT,
-				"[SendMe]   " + sendMeData.getSubject());
+		emailIntent.putExtra(Intent.EXTRA_SUBJECT, SettingActivity.getSubjectResult(this, sendMeData.getSubject()) );
 
 		emailIntent.putExtra(Intent.EXTRA_TEXT, sendMeData.getBody());
 
