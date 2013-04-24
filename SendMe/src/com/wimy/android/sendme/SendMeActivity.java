@@ -47,10 +47,12 @@ public class SendMeActivity extends Activity
 			new TwitterForAndroid(),
 		};
 		
-		for ( SendMeFilter filter : filters ) {
-			SendMeData filtered = filter.filter(sendMeData);
+		for ( SendMeFilter filter : filters )
+		{
+			SendMeData filtered = filter.filter(sendMeData, this);
 			
-			if ( filtered != null ) {
+			if ( filtered != null )
+			{
 				sendMeData.copyFrom(filtered);
 				return;
 			}

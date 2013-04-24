@@ -1,19 +1,22 @@
 package com.wimy.android.sendme.filter;
 
+import android.content.Context;
+
 import com.wimy.android.sendme.SendMeData;
 import com.wimy.android.sendme.SendMeFilter;
 
 public class TweetDeckFacebook implements SendMeFilter
 {
 	@Override
-	public SendMeData filter(SendMeData original)
+	public SendMeData filter(SendMeData original, Context context)
 	{
 		final String checkSubject = "Facebook Status";
 		final String checkBody = "Original Facebook Status";
 		
 		if ( original.getSubject().indexOf(checkSubject) != -1
 				&& original.getBody().indexOf(checkBody) != -1
-				) {
+				)
+		{
 			SendMeData newData = new SendMeData();
 			newData.copyFrom(original);
 			

@@ -4,5 +4,5 @@
     <string name="email_address">Email Address</string>
     <string name="save">Save</string>
     <string name="subject_prefix">Subject Prefix</string>
-    <string name="filter_TwitterForAndroid_check_body">s</string>
+    <string name="filter_TwitterForAndroid_check_body">트윗함:</string>
 </resources>

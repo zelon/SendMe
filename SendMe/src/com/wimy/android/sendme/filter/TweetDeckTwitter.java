@@ -1,5 +1,7 @@
 package com.wimy.android.sendme.filter;
 
+import android.content.Context;
+
 import com.wimy.android.sendme.SendMeData;
 import com.wimy.android.sendme.SendMeFilter;
 
@@ -7,7 +9,7 @@ public class TweetDeckTwitter implements SendMeFilter
 {
 
 	@Override
-	public SendMeData filter(SendMeData original)
+	public SendMeData filter(SendMeData original, Context context)
 	{
 		final String checkSubject = "Tweet forwarded";
 		final String checkBody = "Original Tweet";
