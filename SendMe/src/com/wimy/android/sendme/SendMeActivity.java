@@ -1,13 +1,11 @@
 package com.wimy.android.sendme;
 
-import com.wimy.android.sendme.filter.TweetDeckFacebook;
-import com.wimy.android.sendme.filter.TweetDeckTwitter;
-import com.wimy.android.sendme.filter.TwitterForAndroid;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.Toast;
+
+import com.wimy.android.sendme.filter.TwitterForAndroid;
 
 /**
  * Make another Intent to email application and finish itself
@@ -42,8 +40,6 @@ public class SendMeActivity extends Activity
 	private void filterData(SendMeData sendMeData)
 	{
 		SendMeFilter [] filters = new SendMeFilter[] {
-			new TweetDeckTwitter(),
-			new TweetDeckFacebook(),
 			new TwitterForAndroid(),
 		};
 		
