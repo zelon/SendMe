@@ -1,0 +1,18 @@
+<PreferenceScreen xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="SendMe Settings" app:key="sendme">
+
+        <EditTextPreference
+            app:key="email_address"
+            app:title="@string/email_address"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            app:key="subject_prefix"
+            app:title="@string/subject_prefix"
+            app:defaultValue="[SendMe] "
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

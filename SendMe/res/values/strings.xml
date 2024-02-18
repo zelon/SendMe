@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<resources>
-    <string name="app_name">Send Me</string>
-    <string name="email_address">Email Address</string>
-    <string name="save">Save</string>
-    <string name="subject_prefix">Subject Prefix</string>
-    <string name="filter_TwitterForAndroid_check_body">s</string>
-</resources>
